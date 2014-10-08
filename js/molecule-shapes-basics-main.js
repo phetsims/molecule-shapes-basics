@@ -12,11 +12,13 @@ define( function( require ) {
   var ModelMoleculesScreen = require( 'MOLECULE_SHAPES/screens/model/ModelMoleculesScreen' );
   var RealMoleculesScreen = require( 'MOLECULE_SHAPES/screens/real/RealMoleculesScreen' );
   var MoleculeShapesColors = require( 'MOLECULE_SHAPES/view/MoleculeShapesColors' );
+  var MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/view/MoleculeShapesGlobals' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
   var simTitle = require( 'string!MOLECULE_SHAPES/molecule-shapes-basics.name' );
+  var projectorColorsString = require( 'string!MOLECULE_SHAPES/options.projectorColors' );
 
   var simOptions = {
     credits: {
@@ -25,7 +27,14 @@ define( function( require ) {
       softwareDevelopment: '',
       team: '',
       thanks: ''
-    }
+    },
+    globalOptions: [
+      {
+        label: projectorColorsString,
+        type: 'boolean',
+        property: MoleculeShapesGlobals.projectorColorsProperty
+      }
+    ]
   };
 
   // Appending '?dev' to the URL will enable developer-only features.
@@ -40,9 +49,15 @@ define( function( require ) {
   var isBasicsVersion = true;
   MoleculeShapesColors.applyProfile( 'basics' );
 
-  if ( window.phetcommon.getQueryParameter( 'projector' ) ) {
-    MoleculeShapesColors.applyProfile( 'projector' );
-  }
+  MoleculeShapesGlobals.projectorColorsProperty.link( function( useProjectorColors ) {
+    if ( useProjectorColors ) {
+      MoleculeShapesColors.applyProfile( 'default' );
+      MoleculeShapesColors.applyProfile( 'projector' );
+    } else {
+      MoleculeShapesColors.applyProfile( 'default' );
+      MoleculeShapesColors.applyProfile( 'basics' );
+    }
+  } );
 
   SimLauncher.launch( function() {
     var sim = new Sim( simTitle, [
