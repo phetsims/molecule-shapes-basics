@@ -40,7 +40,7 @@ define( function( require ) {
     }, simOptions );
   }
 
-  // NOTE: ?canvasOnly will trigger Canvas rendering with a reduced poly-count
+  // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
 
   MoleculeShapesColors.applyProfile( 'basics' );
 
