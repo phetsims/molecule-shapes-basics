@@ -47,7 +47,8 @@ define( function( require ) {
     if ( useProjectorColors ) {
       MoleculeShapesColors.applyProfile( 'default' );
       MoleculeShapesColors.applyProfile( 'projector' );
-    } else {
+    }
+    else {
       MoleculeShapesColors.applyProfile( 'default' );
       MoleculeShapesColors.applyProfile( 'basics' );
     }
@@ -57,7 +58,7 @@ define( function( require ) {
     var sim = new Sim( simTitle, [
       new ModelMoleculesScreen( isBasicsVersion ),
       new RealMoleculesScreen( isBasicsVersion )
-      ], simOptions );
+    ], simOptions );
     sim.start();
   } );
 } );
