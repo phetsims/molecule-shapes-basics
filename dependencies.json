@@ -56,12 +56,12 @@
     "branch": "master"
   },
   "molecule-shapes": {
-    "sha": "562e01df0d75e0ca671b6b4115608db9eddafe1a",
+    "sha": "ca562dcffd91ea41acbc724158285ba13d41637e",
     "branch": "master"
   },
   "molecule-shapes-basics": {
-    "sha": "16ba00ef99fe80126105e3d8ea77087dde8ed080",
+    "sha": "c68df447c1cdb6d3205222d08daf20688a11f571",
     "branch": "master"
   },
-  "comment": "# molecule-shapes-basics 1.0.0-dev.7 Wed Feb 04 2015 23:03:32 GMT-0700 (Mountain Standard Time)"
+  "comment": "# molecule-shapes-basics 1.0.0-dev.8 Wed Feb 04 2015 23:22:19 GMT-0700 (Mountain Standard Time)"
 }
