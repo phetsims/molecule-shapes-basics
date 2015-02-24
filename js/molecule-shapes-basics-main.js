@@ -14,6 +14,7 @@ define( function( require ) {
   var MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/common/MoleculeShapesGlobals' );
   var MoleculeShapesColors = require( 'MOLECULE_SHAPES/common/view/MoleculeShapesColors' );
   var GlobalOptionsNode = require( 'MOLECULE_SHAPES/common/view/GlobalOptionsNode' );
+  var CanvasWarningNode = require( 'SCENERY_PHET/CanvasWarningNode' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
@@ -29,7 +30,11 @@ define( function( require ) {
       team: 'Julia Chamberlain, Kelly Lancaster, Ariel Paul, Kathy Perkins',
       qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
     },
-    optionsNode: new GlobalOptionsNode( isBasicsVersion )
+    optionsNode: new GlobalOptionsNode( isBasicsVersion ),
+    homeScreenWarningNode: MoleculeShapesGlobals.useWebGL ? null : new CanvasWarningNode(),
+
+    // ?accessibility will turn on accessibility features
+    accessibility: !!phet.chipper.getQueryParameter( 'accessibility' ) // TODO: control with query parameter
   };
 
   // Appending '?dev' to the URL will enable developer-only features.
