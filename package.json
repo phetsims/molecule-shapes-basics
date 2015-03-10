@@ -15,5 +15,5 @@
     "uglify-js": "~2.4.0",
     "requirejs": "~2.1.8"
   },
-  "simTitleStringKey": "MOLECULE_SHAPES/molecule-shapes-basics.name"
+  "simTitleStringKey": "MOLECULE_SHAPES_BASICS/molecule-shapes-basics.name"
 }
