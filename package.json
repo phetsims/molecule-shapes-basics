@@ -1,6 +1,6 @@
 {
   "name": "molecule-shapes-basics",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "license": "GPLv3",
   "simTitleStringKey": "MOLECULE_SHAPES_BASICS/molecule-shapes-basics.name",
   "phetLibs": "molecule-shapes-basics molecule-shapes assert axon brand chipper dot joist kite nitroglycerin phet-core phetcommon scenery scenery-phet sherpa sun",
