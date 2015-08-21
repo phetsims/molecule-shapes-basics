@@ -15,7 +15,6 @@
   },
   "phet": {
     "requirejsNamespace": "MOLECULE_SHAPES_BASICS",
-    "simTitleStringKey": "MOLECULE_SHAPES_BASICS/molecule-shapes-basics.name",
     "phetLibs": [
       "molecule-shapes",
       "nitroglycerin"
