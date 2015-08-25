@@ -11,10 +11,11 @@ define( function( require ) {
   // modules
   var ModelMoleculesScreen = require( 'MOLECULE_SHAPES/model/ModelMoleculesScreen' );
   var RealMoleculesScreen = require( 'MOLECULE_SHAPES/real/RealMoleculesScreen' );
-  var MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/common/MoleculeShapesGlobals' );
   var MoleculeShapesColors = require( 'MOLECULE_SHAPES/common/view/MoleculeShapesColors' );
+  var MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/common/MoleculeShapesGlobals' );
   var GlobalOptionsNode = require( 'MOLECULE_SHAPES/common/view/GlobalOptionsNode' );
   var CanvasWarningNode = require( 'SCENERY_PHET/CanvasWarningNode' );
+  var IE11StencilWarningNode = require( 'SCENERY_PHET/IE11StencilWarningNode' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
@@ -31,7 +32,11 @@ define( function( require ) {
       qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
     },
     optionsNode: new GlobalOptionsNode( isBasicsVersion ),
-    homeScreenWarningNode: MoleculeShapesGlobals.useWebGL ? null : new CanvasWarningNode()
+    homeScreenWarningNode: MoleculeShapesGlobals.useWebGL ?
+                             null :
+                             ( MoleculeShapesGlobals.hasBasicWebGLSupport ?
+                               new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
+                               new CanvasWarningNode() )
   };
 
   // Appending '?dev' to the URL will enable developer-only features.
