@@ -20,7 +20,7 @@ define( function( require ) {
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
-  var simTitle = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.title' );
+  var moleculeShapesBasicsTitleString = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.title' );
 
   var isBasicsVersion = true;
 
@@ -62,7 +62,7 @@ define( function( require ) {
   } );
 
   SimLauncher.launch( function() {
-    var sim = new Sim( simTitle, [
+    var sim = new Sim( moleculeShapesBasicsTitleString, [
       new ModelMoleculesScreen( isBasicsVersion ),
       new RealMoleculesScreen( isBasicsVersion )
     ], simOptions );
