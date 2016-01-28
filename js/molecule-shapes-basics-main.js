@@ -1,4 +1,4 @@
-// Copyright 2002-2014, University of Colorado Boulder
+// Copyright 2014-2015, University of Colorado Boulder
 
 /**
  * Main entry point for the sim.
@@ -20,7 +20,7 @@ define( function( require ) {
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
-  var simTitle = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.name' );
+  var moleculeShapesBasicsTitleString = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.title' );
 
   var isBasicsVersion = true;
 
@@ -33,10 +33,10 @@ define( function( require ) {
     },
     optionsNode: new GlobalOptionsNode( isBasicsVersion ),
     homeScreenWarningNode: MoleculeShapesGlobals.useWebGL ?
-                             null :
-                             ( MoleculeShapesGlobals.hasBasicWebGLSupport ?
-                               new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
-                               new CanvasWarningNode() )
+                           null :
+                           ( MoleculeShapesGlobals.hasBasicWebGLSupport ?
+                             new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
+                             new CanvasWarningNode() )
   };
 
   // Appending '?dev' to the URL will enable developer-only features.
@@ -62,7 +62,7 @@ define( function( require ) {
   } );
 
   SimLauncher.launch( function() {
-    var sim = new Sim( simTitle, [
+    var sim = new Sim( moleculeShapesBasicsTitleString, [
       new ModelMoleculesScreen( isBasicsVersion ),
       new RealMoleculesScreen( isBasicsVersion )
     ], simOptions );
