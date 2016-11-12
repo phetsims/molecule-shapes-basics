@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var ModelMoleculesScreen = require( 'MOLECULE_SHAPES/model/ModelMoleculesScreen' );
   var RealMoleculesScreen = require( 'MOLECULE_SHAPES/real/RealMoleculesScreen' );
-  var MoleculeShapesColors = require( 'MOLECULE_SHAPES/common/view/MoleculeShapesColors' );
+  var MoleculeShapesColorProfile = require( 'MOLECULE_SHAPES/common/view/MoleculeShapesColorProfile' );
   var MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/common/MoleculeShapesGlobals' );
   var GlobalOptionsNode = require( 'MOLECULE_SHAPES/common/view/GlobalOptionsNode' );
   var CanvasWarningNode = require( 'SCENERY_PHET/CanvasWarningNode' );
@@ -41,16 +41,16 @@ define( function( require ) {
 
   // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
 
-  MoleculeShapesColors.applyProfile( 'basics' );
+  MoleculeShapesColorProfile.profileNameProperty.set( 'basics' );
 
   MoleculeShapesGlobals.projectorColorsProperty.link( function( useProjectorColors ) {
     if ( useProjectorColors ) {
-      MoleculeShapesColors.applyProfile( 'default' );
-      MoleculeShapesColors.applyProfile( 'projector' );
+      MoleculeShapesColorProfile.profileNameProperty.set( 'default' );
+      MoleculeShapesColorProfile.profileNameProperty.set( 'projector' );
     }
     else {
-      MoleculeShapesColors.applyProfile( 'default' );
-      MoleculeShapesColors.applyProfile( 'basics' );
+      MoleculeShapesColorProfile.profileNameProperty.set( 'default' );
+      MoleculeShapesColorProfile.profileNameProperty.set( 'basics' );
     }
   } );
 
