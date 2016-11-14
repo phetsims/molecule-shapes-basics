@@ -41,17 +41,8 @@ define( function( require ) {
 
   // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
 
-  MoleculeShapesColorProfile.profileNameProperty.set( 'basics' );
-
   MoleculeShapesGlobals.projectorColorsProperty.link( function( useProjectorColors ) {
-    if ( useProjectorColors ) {
-      MoleculeShapesColorProfile.profileNameProperty.set( 'default' );
-      MoleculeShapesColorProfile.profileNameProperty.set( 'projector' );
-    }
-    else {
-      MoleculeShapesColorProfile.profileNameProperty.set( 'default' );
-      MoleculeShapesColorProfile.profileNameProperty.set( 'basics' );
-    }
+    MoleculeShapesColorProfile.profileNameProperty.set( useProjectorColors ? 'projector' : 'basics' );
   } );
 
   SimLauncher.launch( function() {
