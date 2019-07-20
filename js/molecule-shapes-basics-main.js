@@ -34,9 +34,9 @@ define( function( require ) {
     // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
     webgl: true,
 
-    // Project Mode checkbox will toggle between 'projector' and 'basics' profiles.
-    optionsNode: new GlobalOptionsNode( isBasicsVersion, {
-      defaultColorProfileName: 'basics'
+    // Creates content for the Options dialog
+    createOptionsDialogContent: () => new GlobalOptionsNode( isBasicsVersion, {
+      defaultColorProfileName: 'basics' // Project Mode checkbox will toggle between 'projector' and 'basics' profiles
     } ),
 
     homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
