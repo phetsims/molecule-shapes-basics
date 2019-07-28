@@ -13,6 +13,7 @@ define( function( require ) {
   var GlobalOptionsNode = require( 'MOLECULE_SHAPES/common/view/GlobalOptionsNode' );
   var IE11StencilWarningNode = require( 'SCENERY_PHET/IE11StencilWarningNode' );
   var ModelMoleculesScreen = require( 'MOLECULE_SHAPES/model/ModelMoleculesScreen' );
+  var MoleculeShapesColorProfile = require( 'MOLECULE_SHAPES/common/view/MoleculeShapesColorProfile' );
   var MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/common/MoleculeShapesGlobals' );
   var RealMoleculesScreen = require( 'MOLECULE_SHAPES/real/RealMoleculesScreen' );
   var Sim = require( 'JOIST/Sim' );
@@ -21,6 +22,9 @@ define( function( require ) {
   // strings
   var moleculeShapesBasicsTitleString = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.title' );
 
+  // constants
+  var DEFAULT_COLOR_PROFILE_NAME = 'basics';
+  
   var isBasicsVersion = true;
 
   var simOptions = {
@@ -36,7 +40,7 @@ define( function( require ) {
 
     // Creates content for the Options dialog
     createOptionsDialogContent: () => new GlobalOptionsNode( isBasicsVersion, {
-      defaultColorProfileName: 'basics' // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
+      defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
     } ),
 
     homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
@@ -45,6 +49,8 @@ define( function( require ) {
                              new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
                              new CanvasWarningNode() )
   };
+
+  MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
 
   SimLauncher.launch( function() {
     var sim = new Sim( moleculeShapesBasicsTitleString, [
