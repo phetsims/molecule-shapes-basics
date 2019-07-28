@@ -40,7 +40,9 @@ define( function( require ) {
 
     // Creates content for the Options dialog
     createOptionsDialogContent: () => new GlobalOptionsNode( isBasicsVersion, {
-      defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
+
+      // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
+      defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME
     } ),
 
     homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
