@@ -10,6 +10,7 @@ define( function( require ) {
 
   // modules
   var CanvasWarningNode = require( 'SCENERY_PHET/CanvasWarningNode' );
+  var ColorProfile = require( 'SCENERY_PHET/ColorProfile' );
   var GlobalOptionsNode = require( 'MOLECULE_SHAPES/common/view/GlobalOptionsNode' );
   var IE11StencilWarningNode = require( 'SCENERY_PHET/IE11StencilWarningNode' );
   var ModelMoleculesScreen = require( 'MOLECULE_SHAPES/model/ModelMoleculesScreen' );
@@ -52,7 +53,13 @@ define( function( require ) {
                              new CanvasWarningNode() )
   };
 
-  MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
+  // Set the initial color profile, ignoring anything other than 'basics' or 'projector'.
+  if ( phet.chipper.queryParameters.colorProfile === ColorProfile.PROJECTOR_COLOR_PROFILE_NAME ) {
+    MoleculeShapesColorProfile.profileNameProperty.value = phet.chipper.queryParameters.colorProfile;
+  }
+  else {
+    MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
+  }
 
   SimLauncher.launch( function() {
     var sim = new Sim( moleculeShapesBasicsTitleString, [
