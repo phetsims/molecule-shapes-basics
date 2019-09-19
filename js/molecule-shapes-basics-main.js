@@ -24,11 +24,11 @@ define( require => {
   const moleculeShapesBasicsTitleString = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.title' );
 
   // constants
-  var DEFAULT_COLOR_PROFILE_NAME = 'basics';
+  const DEFAULT_COLOR_PROFILE_NAME = 'basics';
   
-  var isBasicsVersion = true;
+  const isBasicsVersion = true;
 
-  var simOptions = {
+  const simOptions = {
     credits: {
       leadDesign: 'Emily B. Moore',
       softwareDevelopment: 'Jonathan Olson',
@@ -62,7 +62,7 @@ define( require => {
   }
 
   SimLauncher.launch( function() {
-    var sim = new Sim( moleculeShapesBasicsTitleString, [
+    const sim = new Sim( moleculeShapesBasicsTitleString, [
       new ModelMoleculesScreen( isBasicsVersion ),
       new RealMoleculesScreen( isBasicsVersion )
     ], simOptions );
