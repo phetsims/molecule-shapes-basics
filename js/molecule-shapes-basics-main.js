@@ -5,67 +5,63 @@
  *
  * @author Jonathan Olson <jonathan.olson@colorado.edu>
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const CanvasWarningNode = require( 'SCENERY_PHET/CanvasWarningNode' );
-  const ColorProfile = require( 'SCENERY_PHET/ColorProfile' );
-  const GlobalOptionsNode = require( 'MOLECULE_SHAPES/common/view/GlobalOptionsNode' );
-  const IE11StencilWarningNode = require( 'SCENERY_PHET/IE11StencilWarningNode' );
-  const ModelMoleculesScreen = require( 'MOLECULE_SHAPES/model/ModelMoleculesScreen' );
-  const MoleculeShapesColorProfile = require( 'MOLECULE_SHAPES/common/view/MoleculeShapesColorProfile' );
-  const MoleculeShapesGlobals = require( 'MOLECULE_SHAPES/common/MoleculeShapesGlobals' );
-  const RealMoleculesScreen = require( 'MOLECULE_SHAPES/real/RealMoleculesScreen' );
-  const Sim = require( 'JOIST/Sim' );
-  const SimLauncher = require( 'JOIST/SimLauncher' );
+import Sim from '../../joist/js/Sim.js';
+import SimLauncher from '../../joist/js/SimLauncher.js';
+import MoleculeShapesGlobals from '../../molecule-shapes/js/common/MoleculeShapesGlobals.js';
+import GlobalOptionsNode from '../../molecule-shapes/js/common/view/GlobalOptionsNode.js';
+import MoleculeShapesColorProfile from '../../molecule-shapes/js/common/view/MoleculeShapesColorProfile.js';
+import ModelMoleculesScreen from '../../molecule-shapes/js/model/ModelMoleculesScreen.js';
+import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScreen.js';
+import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
+import ColorProfile from '../../scenery-phet/js/ColorProfile.js';
+import IE11StencilWarningNode from '../../scenery-phet/js/IE11StencilWarningNode.js';
+import moleculeShapesBasicsStrings from './molecule-shapes-basics-strings.js';
 
-  // strings
-  const moleculeShapesBasicsTitleString = require( 'string!MOLECULE_SHAPES_BASICS/molecule-shapes-basics.title' );
+const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].title;
 
-  // constants
-  const DEFAULT_COLOR_PROFILE_NAME = 'basics';
-  
-  const isBasicsVersion = true;
+// constants
+const DEFAULT_COLOR_PROFILE_NAME = 'basics';
 
-  const simOptions = {
-    credits: {
-      leadDesign: 'Emily B. Moore',
-      softwareDevelopment: 'Jonathan Olson',
-      team: 'Julia Chamberlain, Kelly Lancaster, Ariel Paul, Kathy Perkins',
-      qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
-    },
+const isBasicsVersion = true;
 
-    // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
-    webgl: true,
+const simOptions = {
+  credits: {
+    leadDesign: 'Emily B. Moore',
+    softwareDevelopment: 'Jonathan Olson',
+    team: 'Julia Chamberlain, Kelly Lancaster, Ariel Paul, Kathy Perkins',
+    qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
+  },
 
-    // Creates content for the Options dialog
-    createOptionsDialogContent: () => new GlobalOptionsNode( isBasicsVersion, {
+  // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
+  webgl: true,
 
-      // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
-      defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME
-    } ),
+  // Creates content for the Options dialog
+  createOptionsDialogContent: () => new GlobalOptionsNode( isBasicsVersion, {
 
-    homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
-                           null :
-                           ( MoleculeShapesGlobals.hasBasicWebGLSupportProperty.get() ?
-                             new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
-                             new CanvasWarningNode() )
-  };
+    // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
+    defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME
+  } ),
 
-  // Set the initial color profile, ignoring anything other than 'basics' or 'projector'.
-  if ( phet.chipper.queryParameters.colorProfile === ColorProfile.PROJECTOR_COLOR_PROFILE_NAME ) {
-    MoleculeShapesColorProfile.profileNameProperty.value = phet.chipper.queryParameters.colorProfile;
-  }
-  else {
-    MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
-  }
+  homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
+                         null :
+                         ( MoleculeShapesGlobals.hasBasicWebGLSupportProperty.get() ?
+                           new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
+                           new CanvasWarningNode() )
+};
 
-  SimLauncher.launch( function() {
-    const sim = new Sim( moleculeShapesBasicsTitleString, [
-      new ModelMoleculesScreen( isBasicsVersion ),
-      new RealMoleculesScreen( isBasicsVersion )
-    ], simOptions );
-    sim.start();
-  } );
+// Set the initial color profile, ignoring anything other than 'basics' or 'projector'.
+if ( phet.chipper.queryParameters.colorProfile === ColorProfile.PROJECTOR_COLOR_PROFILE_NAME ) {
+  MoleculeShapesColorProfile.profileNameProperty.value = phet.chipper.queryParameters.colorProfile;
+}
+else {
+  MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
+}
+
+SimLauncher.launch( function() {
+  const sim = new Sim( moleculeShapesBasicsTitleString, [
+    new ModelMoleculesScreen( isBasicsVersion ),
+    new RealMoleculesScreen( isBasicsVersion )
+  ], simOptions );
+  sim.start();
 } );
