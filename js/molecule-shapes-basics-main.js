@@ -16,7 +16,7 @@ import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScre
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
 import ColorProfile from '../../scenery-phet/js/ColorProfile.js';
 import IE11StencilWarningNode from '../../scenery-phet/js/IE11StencilWarningNode.js';
-import moleculeShapesBasicsStrings from './molecule-shapes-basics-strings.js';
+import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
 
 const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].title;
 
