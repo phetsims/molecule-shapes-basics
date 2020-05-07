@@ -7,7 +7,7 @@
  */
 
 import Sim from '../../joist/js/Sim.js';
-import SimLauncher from '../../joist/js/SimLauncher.js';
+import simLauncher from '../../joist/js/simLauncher.js';
 import MoleculeShapesGlobals from '../../molecule-shapes/js/common/MoleculeShapesGlobals.js';
 import GlobalOptionsNode from '../../molecule-shapes/js/common/view/GlobalOptionsNode.js';
 import MoleculeShapesColorProfile from '../../molecule-shapes/js/common/view/MoleculeShapesColorProfile.js';
@@ -58,7 +58,7 @@ else {
   MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
 }
 
-SimLauncher.launch( function() {
+simLauncher.launch( function() {
   const sim = new Sim( moleculeShapesBasicsTitleString, [
     new ModelMoleculesScreen( isBasicsVersion ),
     new RealMoleculesScreen( isBasicsVersion )
