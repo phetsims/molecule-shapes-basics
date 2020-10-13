@@ -58,7 +58,7 @@ else {
   MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
 }
 
-simLauncher.launch( function() {
+simLauncher.launch( () => {
   const sim = new Sim( moleculeShapesBasicsTitleString, [
     new ModelMoleculesScreen( isBasicsVersion ),
     new RealMoleculesScreen( isBasicsVersion )
