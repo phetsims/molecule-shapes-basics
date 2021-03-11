@@ -16,6 +16,7 @@ import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScre
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
 import ColorProfile from '../../scenery-phet/js/ColorProfile.js';
 import IE11StencilWarningNode from '../../scenery-phet/js/IE11StencilWarningNode.js';
+import Tandem from '../../tandem/js/Tandem.js';
 import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
 
 const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].title;
@@ -37,7 +38,7 @@ const simOptions = {
   webgl: true,
 
   // Creates content for the Options dialog
-  createOptionsDialogContent: () => new GlobalOptionsNode( isBasicsVersion, {
+  createOptionsDialogContent: tandem => new GlobalOptionsNode( isBasicsVersion, tandem, {
 
     // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
     defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME
@@ -50,18 +51,18 @@ const simOptions = {
                            new CanvasWarningNode() )
 };
 
-// Set the initial color profile, ignoring anything other than 'basics' or 'projector'.
-if ( phet.chipper.queryParameters.colorProfile === ColorProfile.PROJECTOR_COLOR_PROFILE_NAME ) {
-  MoleculeShapesColorProfile.profileNameProperty.value = phet.chipper.queryParameters.colorProfile;
-}
-else {
-  MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
-}
-
 simLauncher.launch( () => {
   const sim = new Sim( moleculeShapesBasicsTitleString, [
-    new ModelMoleculesScreen( isBasicsVersion ),
-    new RealMoleculesScreen( isBasicsVersion )
+    new ModelMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'modelMoleculesScreen' ) ),
+    new RealMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'realMoleculesScreen' ) )
   ], simOptions );
   sim.start();
+
+  // Set the initial color profile, ignoring anything other than 'basics' or 'projector'.
+  if ( phet.chipper.queryParameters.colorProfile === ColorProfile.PROJECTOR_COLOR_PROFILE_NAME ) {
+    MoleculeShapesColorProfile.profileNameProperty.value = phet.chipper.queryParameters.colorProfile;
+  }
+  else {
+    MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
+  }
 } );
