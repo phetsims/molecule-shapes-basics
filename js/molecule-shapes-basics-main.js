@@ -53,7 +53,7 @@ const simOptions = {
 
 simLauncher.launch( () => {
   const sim = new Sim( moleculeShapesBasicsTitleString, [
-    new ModelMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'modelMoleculesScreen' ) ),
+    new ModelMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'modelScreen' ) ),
     new RealMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'realMoleculesScreen' ) )
   ], simOptions );
   sim.start();
