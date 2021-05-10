@@ -1,5 +1,5 @@
 {
-  "comment": "# molecule-shapes-basics 1.2.9-rc.1 Mon May 10 2021 11:29:49 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# molecule-shapes-basics 1.2.9-rc.1 Mon May 10 2021 16:03:07 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "d8a2e8992420327ff72a6fc4bb93ec76549ded0e",
     "branch": "HEAD"
@@ -33,7 +33,7 @@
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "ec2fedfeda060d1951ee37285f442a6b0500a6eb",
+    "sha": "206013aea58adce2d182e87d14bfe16b7482670b",
     "branch": "1.2"
   },
   "nitroglycerin": {
@@ -58,15 +58,15 @@
   },
   "phetmarks": {
     "sha": "a65a2eb42eb10a2a36d573bdec68e287e3bfcc56",
-    "branch": "molecule-shapes-basics-1.2"
+    "branch": "HEAD"
   },
   "query-string-machine": {
     "sha": "e47329ccba50671352daf74eb8de1b7b7d80da48",
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "dd63cc2713f462e7942527d0fa01a1e2fcbdf728",
-    "branch": "HEAD"
+    "sha": "c49ccc7ba31b78530b854d95cf37e3b72713176b",
+    "branch": "molecule-shapes-basics-1.2"
   },
   "scenery-phet": {
     "sha": "41e58e6720ed4d1a9e748be03c961a11f458afd9",
