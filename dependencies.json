@@ -33,7 +33,7 @@
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "206013aea58adce2d182e87d14bfe16b7482670b",
+    "sha": "9706d9c851b9b4fc0f49fc75b9abba9fba629bad",
     "branch": "1.2"
   },
   "nitroglycerin": {
@@ -65,7 +65,7 @@
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "c49ccc7ba31b78530b854d95cf37e3b72713176b",
+    "sha": "5a22f180b040519274a5fc755ff9772ff5cf3937",
     "branch": "molecule-shapes-basics-1.2"
   },
   "scenery-phet": {
