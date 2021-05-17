@@ -29,6 +29,7 @@ git clone https://github.com/phetsims/chipper.git
 git clone https://github.com/phetsims/dot.git
 git clone https://github.com/phetsims/joist.git
 git clone https://github.com/phetsims/kite.git
+git clone https://github.com/phetsims/mobius.git
 git clone https://github.com/phetsims/molecule-shapes.git
 git clone https://github.com/phetsims/molecule-shapes-basics.git
 git clone https://github.com/phetsims/nitroglycerin.git
