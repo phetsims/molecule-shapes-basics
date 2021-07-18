@@ -10,11 +10,9 @@ import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import MoleculeShapesGlobals from '../../molecule-shapes/js/common/MoleculeShapesGlobals.js';
 import GlobalOptionsNode from '../../molecule-shapes/js/common/view/GlobalOptionsNode.js';
-import MoleculeShapesColorProfile from '../../molecule-shapes/js/common/view/MoleculeShapesColorProfile.js';
 import ModelMoleculesScreen from '../../molecule-shapes/js/model/ModelMoleculesScreen.js';
 import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScreen.js';
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
-import ColorProfile from '../../scenery-phet/js/ColorProfile.js';
 import IE11StencilWarningNode from '../../scenery-phet/js/IE11StencilWarningNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
@@ -57,12 +55,4 @@ simLauncher.launch( () => {
     new RealMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'realMoleculesScreen' ) )
   ], simOptions );
   sim.start();
-
-  // Set the initial color profile, ignoring anything other than 'basics' or 'projector'.
-  if ( phet.chipper.queryParameters.colorProfile === ColorProfile.PROJECTOR_COLOR_PROFILE_NAME ) {
-    MoleculeShapesColorProfile.profileNameProperty.value = phet.chipper.queryParameters.colorProfile;
-  }
-  else {
-    MoleculeShapesColorProfile.profileNameProperty.value = DEFAULT_COLOR_PROFILE_NAME;
-  }
 } );
