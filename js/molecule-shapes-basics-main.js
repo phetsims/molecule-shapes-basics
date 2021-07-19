@@ -19,9 +19,6 @@ import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
 
 const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].title;
 
-// constants
-const DEFAULT_COLOR_PROFILE_NAME = 'basics';
-
 const isBasicsVersion = true;
 
 const simOptions = {
@@ -35,12 +32,9 @@ const simOptions = {
   // NOTE: ?webgl=false will trigger Canvas rendering with a reduced poly-count
   webgl: true,
 
-  // Creates content for the Options dialog
-  createOptionsDialogContent: tandem => new GlobalOptionsNode( isBasicsVersion, tandem, {
-
-    // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
-    defaultColorProfileName: DEFAULT_COLOR_PROFILE_NAME
-  } ),
+  // Creates content for the Options dialog.
+  // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
+  createOptionsDialogContent: tandem => new GlobalOptionsNode( isBasicsVersion, tandem ),
 
   homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
                          null :
