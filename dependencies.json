@@ -1,0 +1,115 @@
+{
+  "comment": "# molecule-shapes-basics 1.3.0-dev.1 Thu Oct 07 2021 15:15:13 GMT-0600 (Mountain Daylight Time)",
+  "assert": {
+    "sha": "767b2f345518ceca5144a152ecf40cd4f9206136",
+    "branch": "master"
+  },
+  "axon": {
+    "sha": "f57e0e8b5215f8cb16b242a006109238a261b821",
+    "branch": "master"
+  },
+  "brand": {
+    "sha": "d08626f23cb72a1b27d3003484bba912d0e93232",
+    "branch": "master"
+  },
+  "chipper": {
+    "sha": "3408f16f00248327ccd03bcd8e5c84208148ffda",
+    "branch": "master"
+  },
+  "dot": {
+    "sha": "15d5fd87adad8a2431fa919ffca36d5d17290ea5",
+    "branch": "master"
+  },
+  "joist": {
+    "sha": "66006a5c4b497c19bd1180bb79082664a4b010d8",
+    "branch": "master"
+  },
+  "kite": {
+    "sha": "21eae6269782f9b8d80f8ca041e345468d789367",
+    "branch": "master"
+  },
+  "mobius": {
+    "sha": "479cd04c544e3b62c7eaed3b434f9ad913814e7b",
+    "branch": "master"
+  },
+  "molecule-shapes": {
+    "sha": "db399fc9d640b4412fa4cebdbec6b7853036b879",
+    "branch": "master"
+  },
+  "molecule-shapes-basics": {
+    "sha": "646504630892f222c9e4ba0157f76815b456f7af",
+    "branch": "master"
+  },
+  "nitroglycerin": {
+    "sha": "165cd64bb22b01bd0ee6b81a0200753ebced8330",
+    "branch": "master"
+  },
+  "perennial-alias": {
+    "sha": "5daec63d7d4395d2c9a824b7f46b83490c1bb472",
+    "branch": "master"
+  },
+  "phet-core": {
+    "sha": "6cb04ab9f1381c428abbec7a1cbf481f08eda796",
+    "branch": "master"
+  },
+  "phet-io": {
+    "sha": "a7b5bc3303c16f53a70706669da5ded1cecf4321",
+    "branch": "master"
+  },
+  "phet-io-client-guides": {
+    "sha": "aafdffc4d89302e44a9ef1df2b1b5570ec9131ad",
+    "branch": "master"
+  },
+  "phet-io-wrappers": {
+    "sha": "410e52c83f3542da5560a9583ff8feb830504d3b",
+    "branch": "master"
+  },
+  "phetcommon": {
+    "sha": "4eafe0cfc8389cbc760edeae9b8d5c644ce946ef",
+    "branch": "master"
+  },
+  "phetmarks": {
+    "sha": "71b469d411762638cca7e890c47d40b5d054abdf",
+    "branch": "master"
+  },
+  "query-string-machine": {
+    "sha": "55a5723b2702f3bfeeab9cbe35672e8c08289eab",
+    "branch": "master"
+  },
+  "scenery": {
+    "sha": "7edd153d7c6fe7a122f3f426af0657c0fbeb1540",
+    "branch": "master"
+  },
+  "scenery-phet": {
+    "sha": "6cf10a45acce6bd24271579f911b01290b2332d6",
+    "branch": "master"
+  },
+  "sherpa": {
+    "sha": "cff1a3bd47ae6de4402113c83e22043daaf0671a",
+    "branch": "master"
+  },
+  "studio": {
+    "sha": "9d157fa1c863de4bfb669f1777fc7abf1f4e7204",
+    "branch": "master"
+  },
+  "sun": {
+    "sha": "a109378110df39efbad35c9c66d021753e54916b",
+    "branch": "master"
+  },
+  "tambo": {
+    "sha": "50a312addd1b1cb3664e096d93551c6a3648c353",
+    "branch": "master"
+  },
+  "tandem": {
+    "sha": "80550841ad5dd034f22286348be81a5bc0b7e21c",
+    "branch": "master"
+  },
+  "twixt": {
+    "sha": "052bb752e847800ac719e95c3d041b398ef90d95",
+    "branch": "master"
+  },
+  "utterance-queue": {
+    "sha": "c95b7e9bb50a37b3b7b125f34f669d4300c494c8",
+    "branch": "master"
+  }
+}
