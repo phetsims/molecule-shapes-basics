@@ -3,11 +3,17 @@
 /**
  * Auto-generated from modulify, DO NOT manually modify.
  */
-
+/* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
 import moleculeShapesBasics from './moleculeShapesBasics.js';
 
-const moleculeShapesBasicsStrings = getStringModule( 'MOLECULE_SHAPES_BASICS' );
+type StringsType = {
+  'molecule-shapes-basics': {
+    'title': string
+  }
+};
+
+const moleculeShapesBasicsStrings = getStringModule( 'MOLECULE_SHAPES_BASICS' ) as StringsType;
 
 moleculeShapesBasics.register( 'moleculeShapesBasicsStrings', moleculeShapesBasicsStrings );
 
