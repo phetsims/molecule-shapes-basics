@@ -13,7 +13,6 @@ import GlobalOptionsNode from '../../molecule-shapes/js/common/view/GlobalOption
 import ModelMoleculesScreen from '../../molecule-shapes/js/model/ModelMoleculesScreen.js';
 import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScreen.js';
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
-import IE11StencilWarningNode from '../../molecule-shapes/js/common/view/IE11StencilWarningNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
 
@@ -38,9 +37,7 @@ const simOptions = {
 
   homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
                          null :
-                         ( MoleculeShapesGlobals.hasBasicWebGLSupportProperty.get() ?
-                           new IE11StencilWarningNode() : // if we have basic support, we failed due to IE-specific reasons
-                           new CanvasWarningNode() )
+                         new CanvasWarningNode()
 };
 
 simLauncher.launch( () => {
