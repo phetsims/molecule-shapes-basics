@@ -9,7 +9,7 @@ import moleculeShapesBasics from './moleculeShapesBasics.js';
 
 type StringsType = {
   'molecule-shapes-basics': {
-    'title': string
+    'title': string;
   }
 };
 
