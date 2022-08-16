@@ -37,9 +37,6 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "moleculeShapesBasics.modelScreen.view.bondingPanel.singleBondNode.visibleProperty": {
       "phetioFeatured": true
     },
-    "moleculeShapesBasics.modelScreen.view.bondingPanel.titleNode.textProperty": {
-      "phetioFeatured": true
-    },
     "moleculeShapesBasics.modelScreen.view.bondingPanel.titleNode.visibleProperty": {
       "phetioFeatured": true
     },
@@ -58,26 +55,14 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "moleculeShapesBasics.modelScreen.view.moleculeNode.visibleProperty": {
       "phetioFeatured": true
     },
-    "moleculeShapesBasics.modelScreen.view.namePanel.moleculeGeometryCheckbox.labelText.textProperty": {
-      "phetioFeatured": true
-    },
     "moleculeShapesBasics.modelScreen.view.namePanel.moleculeGeometryCheckbox.visibleProperty": {
       "phetioFeatured": false
-    },
-    "moleculeShapesBasics.modelScreen.view.namePanel.titleNode.textProperty": {
-      "phetioFeatured": true
     },
     "moleculeShapesBasics.modelScreen.view.namePanel.titleNode.visibleProperty": {
       "phetioFeatured": true
     },
-    "moleculeShapesBasics.modelScreen.view.optionsPanel.showBondAnglesCheckbox.labelText.textProperty": {
-      "phetioFeatured": true
-    },
     "moleculeShapesBasics.modelScreen.view.optionsPanel.showBondAnglesCheckbox.visibleProperty": {
       "phetioFeatured": false
-    },
-    "moleculeShapesBasics.modelScreen.view.optionsPanel.titleNode.textProperty": {
-      "phetioFeatured": true
     },
     "moleculeShapesBasics.modelScreen.view.optionsPanel.titleNode.visibleProperty": {
       "phetioFeatured": true
@@ -109,23 +94,14 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "moleculeShapesBasics.realMoleculesScreen.view.moleculePanel.moleculeComboBox.visibleProperty": {
       "phetioFeatured": false
     },
-    "moleculeShapesBasics.realMoleculesScreen.view.moleculePanel.titleNode.textProperty": {
-      "phetioFeatured": true
-    },
     "moleculeShapesBasics.realMoleculesScreen.view.moleculePanel.titleNode.visibleProperty": {
       "phetioFeatured": true
     },
     "moleculeShapesBasics.realMoleculesScreen.view.moleculePanel.visibleProperty": {
       "phetioFeatured": true
     },
-    "moleculeShapesBasics.realMoleculesScreen.view.namePanel.moleculeGeometryCheckbox.labelText.textProperty": {
-      "phetioFeatured": true
-    },
     "moleculeShapesBasics.realMoleculesScreen.view.namePanel.moleculeGeometryCheckbox.visibleProperty": {
       "phetioFeatured": false
-    },
-    "moleculeShapesBasics.realMoleculesScreen.view.namePanel.titleNode.textProperty": {
-      "phetioFeatured": true
     },
     "moleculeShapesBasics.realMoleculesScreen.view.namePanel.titleNode.visibleProperty": {
       "phetioFeatured": true
@@ -133,14 +109,8 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "moleculeShapesBasics.realMoleculesScreen.view.namePanel.visibleProperty": {
       "phetioFeatured": true
     },
-    "moleculeShapesBasics.realMoleculesScreen.view.optionsPanel.showBondAnglesCheckbox.labelText.textProperty": {
-      "phetioFeatured": true
-    },
     "moleculeShapesBasics.realMoleculesScreen.view.optionsPanel.showBondAnglesCheckbox.visibleProperty": {
       "phetioFeatured": false
-    },
-    "moleculeShapesBasics.realMoleculesScreen.view.optionsPanel.titleNode.textProperty": {
-      "phetioFeatured": true
     },
     "moleculeShapesBasics.realMoleculesScreen.view.optionsPanel.titleNode.visibleProperty": {
       "phetioFeatured": true
