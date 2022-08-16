@@ -5,11 +5,13 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
+import TReadOnlyProperty from '../../axon/js/TReadOnlyProperty.js';
 import moleculeShapesBasics from './moleculeShapesBasics.js';
 
 type StringsType = {
   'molecule-shapes-basics': {
     'title': string;
+    'titleProperty': TReadOnlyProperty<string>;
   }
 };
 
