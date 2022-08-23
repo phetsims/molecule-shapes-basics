@@ -38,7 +38,7 @@ const simOptions = {
 
         // Creates content for the Options dialog.
         // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
-        createContent: tandem => new GlobalOptionsNode( isBasicsVersion, tandem )
+        createContent: tandem => new GlobalOptionsNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
       } ]
     }
   } ),
