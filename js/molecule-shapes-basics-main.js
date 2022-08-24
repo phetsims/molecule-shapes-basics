@@ -10,7 +10,7 @@ import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import MoleculeShapesGlobals from '../../molecule-shapes/js/common/MoleculeShapesGlobals.js';
-import GlobalOptionsNode from '../../molecule-shapes/js/common/view/GlobalOptionsNode.js';
+import GeneralPreferencesContentNode from '../../molecule-shapes/js/common/view/GeneralPreferencesContentNode.js';
 import ModelMoleculesScreen from '../../molecule-shapes/js/model/ModelMoleculesScreen.js';
 import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScreen.js';
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
@@ -38,7 +38,7 @@ const simOptions = {
 
         // Creates content for the Options dialog.
         // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
-        createContent: tandem => new GlobalOptionsNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
+        createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
       } ]
     }
   } ),
