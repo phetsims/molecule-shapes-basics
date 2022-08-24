@@ -36,8 +36,7 @@ const simOptions = {
     generalOptions: {
       customPreferences: [ {
 
-        // Creates content for the Options dialog.
-        // Projector Mode checkbox will toggle between 'projector' and 'basics' profiles
+        // Creates content for the General tab in preferences.
         createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
       } ]
     }
