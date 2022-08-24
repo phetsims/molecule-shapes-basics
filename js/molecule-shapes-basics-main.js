@@ -27,7 +27,7 @@ const generalCustomPreferences = isBasicsVersion ? [] : [
   {
 
     // Creates content for the General tab in preferences.
-    createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
+    createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'simPreferences' ) )
   }
 ];
 
