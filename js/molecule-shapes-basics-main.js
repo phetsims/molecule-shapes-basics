@@ -21,7 +21,8 @@ const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-s
 
 const isBasicsVersion = true;
 
-// Basics version only has
+// Basics version has no content for general tab, don't include an empty Node (which adds an extra separator in the
+// dialog).
 const generalCustomPreferences = isBasicsVersion ? [] : [
   {
 
