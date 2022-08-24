@@ -21,6 +21,15 @@ const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-s
 
 const isBasicsVersion = true;
 
+// Basics version only has
+const generalCustomPreferences = isBasicsVersion ? [] : [
+  {
+
+    // Creates content for the General tab in preferences.
+    createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
+  }
+];
+
 const simOptions = {
   credits: {
     leadDesign: 'Emily B. Moore',
@@ -34,11 +43,7 @@ const simOptions = {
 
   preferencesModel: new PreferencesModel( {
     generalOptions: {
-      customPreferences: [ {
-
-        // Creates content for the General tab in preferences.
-        createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
-      } ]
+      customPreferences: generalCustomPreferences
     },
     visualOptions: {
       supportsProjectorMode: true
