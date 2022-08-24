@@ -39,6 +39,9 @@ const simOptions = {
         // Creates content for the General tab in preferences.
         createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'moleculeShapesBasicsPreferencesContent' ) )
       } ]
+    },
+    visualOptions: {
+      supportsProjectorMode: true
     }
   } ),
 
