@@ -21,12 +21,12 @@ const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-s
 
 const isBasicsVersion = true;
 
-// Basics version has no content for general tab, don't include an empty Node (which adds an extra separator in the
+// Basics version has no content for "Simulation" tab, don't include an empty Node (which adds an extra separator in the
 // dialog).
 const generalCustomPreferences = isBasicsVersion ? [] : [
   {
 
-    // Creates content for the General tab in preferences.
+    // Creates content for the Simulation tab in preferences.
     createContent: tandem => new SimulationPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'simPreferences' ) )
   }
 ];
