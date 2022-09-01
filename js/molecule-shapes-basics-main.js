@@ -43,7 +43,7 @@ const simOptions = {
   webgl: true,
 
   preferencesModel: new PreferencesModel( {
-    generalOptions: {
+    simulationOptions: {
       customPreferences: generalCustomPreferences
     },
     visualOptions: {
