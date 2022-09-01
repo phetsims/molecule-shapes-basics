@@ -23,7 +23,7 @@ const isBasicsVersion = true;
 
 // Basics version has no content for "Simulation" tab, don't include an empty Node (which adds an extra separator in the
 // dialog).
-const generalCustomPreferences = isBasicsVersion ? [] : [
+const simulationCustomPreferences = isBasicsVersion ? [] : [
   {
 
     // Creates content for the Simulation tab in preferences.
@@ -44,7 +44,7 @@ const simOptions = {
 
   preferencesModel: new PreferencesModel( {
     simulationOptions: {
-      customPreferences: generalCustomPreferences
+      customPreferences: simulationCustomPreferences
     },
     visualOptions: {
       supportsProjectorMode: true
