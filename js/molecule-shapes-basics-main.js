@@ -10,7 +10,7 @@ import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import MoleculeShapesGlobals from '../../molecule-shapes/js/common/MoleculeShapesGlobals.js';
-import GeneralPreferencesContentNode from '../../molecule-shapes/js/common/view/GeneralPreferencesContentNode.js';
+import SimulationPreferencesContentNode from '../../molecule-shapes/js/common/view/SimulationPreferencesContentNode.js';
 import ModelMoleculesScreen from '../../molecule-shapes/js/model/ModelMoleculesScreen.js';
 import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScreen.js';
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
@@ -27,7 +27,7 @@ const generalCustomPreferences = isBasicsVersion ? [] : [
   {
 
     // Creates content for the General tab in preferences.
-    createContent: tandem => new GeneralPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'simPreferences' ) )
+    createContent: tandem => new SimulationPreferencesContentNode( isBasicsVersion, tandem.createTandem( 'simPreferences' ) )
   }
 ];
 
