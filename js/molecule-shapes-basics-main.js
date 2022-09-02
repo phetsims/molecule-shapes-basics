@@ -17,7 +17,7 @@ import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
 
-const moleculeShapesBasicsTitleString = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].title;
+const moleculeShapesBasicsTitleStringProperty = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].titleStringProperty;
 
 const isBasicsVersion = true;
 
@@ -57,7 +57,7 @@ const simOptions = {
 };
 
 simLauncher.launch( () => {
-  const sim = new Sim( moleculeShapesBasicsTitleString, [
+  const sim = new Sim( moleculeShapesBasicsTitleStringProperty, [
     new ModelMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'modelScreen' ) ),
     new RealMoleculesScreen( isBasicsVersion, Tandem.ROOT.createTandem( 'realMoleculesScreen' ) )
   ], simOptions );
