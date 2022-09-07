@@ -15,9 +15,9 @@ import ModelMoleculesScreen from '../../molecule-shapes/js/model/ModelMoleculesS
 import RealMoleculesScreen from '../../molecule-shapes/js/real/RealMoleculesScreen.js';
 import CanvasWarningNode from '../../scenery-phet/js/CanvasWarningNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
-import moleculeShapesBasicsStrings from './moleculeShapesBasicsStrings.js';
+import MoleculeShapesBasicsStrings from './MoleculeShapesBasicsStrings.js';
 
-const moleculeShapesBasicsTitleStringProperty = moleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].titleStringProperty;
+const moleculeShapesBasicsTitleStringProperty = MoleculeShapesBasicsStrings[ 'molecule-shapes-basics' ].titleStringProperty;
 
 const isBasicsVersion = true;
 
