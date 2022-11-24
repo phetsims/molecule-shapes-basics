@@ -37,7 +37,7 @@
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "546d4f0500150c4d442e4bc6ae36c3a1dcec529f",
+    "sha": "35bcac0b51addd1f280309b6d767766a8dba4a03",
     "branch": "1.4"
   },
   "nitroglycerin": {
@@ -45,7 +45,7 @@
     "branch": "HEAD"
   },
   "perennial-alias": {
-    "sha": "914993465e424a59a1c86a6822cda07abcd23fbb",
+    "sha": "6fbfeb8188d57b5551c5e0909b428b07dcad9e27",
     "branch": "HEAD"
   },
   "phet-core": {
