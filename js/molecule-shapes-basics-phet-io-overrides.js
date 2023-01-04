@@ -61,9 +61,6 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "moleculeShapesBasics.modelScreen.view.namePanel.titleText.visibleProperty": {
       "phetioFeatured": true
     },
-    "moleculeShapesBasics.modelScreen.view.optionsPanel.showBondAnglesCheckbox.visibleProperty": {
-      "phetioFeatured": false
-    },
     "moleculeShapesBasics.modelScreen.view.optionsPanel.titleText.visibleProperty": {
       "phetioFeatured": true
     },
@@ -108,9 +105,6 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     },
     "moleculeShapesBasics.realMoleculesScreen.view.namePanel.visibleProperty": {
       "phetioFeatured": true
-    },
-    "moleculeShapesBasics.realMoleculesScreen.view.optionsPanel.showBondAnglesCheckbox.visibleProperty": {
-      "phetioFeatured": false
     },
     "moleculeShapesBasics.realMoleculesScreen.view.optionsPanel.titleText.visibleProperty": {
       "phetioFeatured": true
