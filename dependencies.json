@@ -33,11 +33,11 @@
     "branch": "HEAD"
   },
   "molecule-shapes": {
-    "sha": "45479924948bbc6f0814688abe4e877dfc7ad3bf",
+    "sha": "15faffc0f756aac45039874c614a98876b2f5fe4",
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "e4862fbc383cf8eb8a00038ae589e13246358632",
+    "sha": "9c7954487d0d307dd305ce03512fef18fc6f4caa",
     "branch": "1.6"
   },
   "nitroglycerin": {
