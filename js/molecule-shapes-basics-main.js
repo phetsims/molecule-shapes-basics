@@ -53,7 +53,10 @@ const simOptions = {
 
   homeScreenWarningNode: MoleculeShapesGlobals.useWebGLProperty.get() ?
                          null :
-                         new CanvasWarningNode()
+                         new CanvasWarningNode(),
+
+  // phet-io options
+  phetioDesigned: true
 };
 
 simLauncher.launch( () => {
