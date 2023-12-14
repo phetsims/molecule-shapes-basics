@@ -37,7 +37,7 @@
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "4a1f641dc520f81ffca675a3322dc54aa0fed60f",
+    "sha": "8aedad01ef885ddb268eaca173d1e240a53d25d2",
     "branch": "1.6"
   },
   "nitroglycerin": {
@@ -61,7 +61,7 @@
     "branch": "HEAD"
   },
   "phet-io-wrappers": {
-    "sha": "7ab5d1b24b4599ff2c0ce37cee9627ec811ab777",
+    "sha": "e77cbaa4f1b79986670956f4eb4b9e2a982e3fea",
     "branch": "HEAD"
   },
   "phetcommon": {
@@ -69,7 +69,7 @@
     "branch": "HEAD"
   },
   "phetmarks": {
-    "sha": "5b3084a2ea029dec575e5dd00752b4013056c13b",
+    "sha": "ef614e52c572086534ecce69a5c9b988661fe524",
     "branch": "HEAD"
   },
   "query-string-machine": {
@@ -101,7 +101,7 @@
     "branch": "HEAD"
   },
   "tandem": {
-    "sha": "dc95daf9aab766f627df777372bf47848672a1a3",
+    "sha": "9eaffee332b45a09524497de8a7a4420f1060774",
     "branch": "HEAD"
   },
   "twixt": {
