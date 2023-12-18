@@ -37,7 +37,7 @@
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "79c31da53fa4058262004dcc4fab17b7086af734",
+    "sha": "bc761559fdb60d9563a8c1f1e9aead8d97dc3966",
     "branch": "1.6"
   },
   "nitroglycerin": {
@@ -93,7 +93,7 @@
     "branch": "HEAD"
   },
   "sun": {
-    "sha": "8630e012e89d21efc1c5b6d9d5c8559d14e97bc0",
+    "sha": "c1576bd7ca54f69cab17828f09ee1e4828bbf9d4",
     "branch": "HEAD"
   },
   "tambo": {
