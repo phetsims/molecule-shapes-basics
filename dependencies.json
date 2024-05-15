@@ -21,7 +21,7 @@
     "branch": "HEAD"
   },
   "joist": {
-    "sha": "ee509d2ab2f57f88799389689baceabf61a94534",
+    "sha": "d49b6705fda62e7d2e1e5824a918d0d24a03f600",
     "branch": "HEAD"
   },
   "kite": {
@@ -37,7 +37,7 @@
     "branch": "HEAD"
   },
   "molecule-shapes-basics": {
-    "sha": "6ce01ccefd93266e3f282bafd088f4a9f9d0824a",
+    "sha": "19b102a96e0813240e94cf8bdead0ca290928eba",
     "branch": "1.6"
   },
   "nitroglycerin": {
